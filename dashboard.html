@@ -1,11 +1,300 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#582f40">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"><title>Member Dashboard | FORME Pilates</title></head><body class="dashboard-page" id="top"><div class="announcement">A stronger relationship with your body starts here <span>—</span> <a href="classes.html">Explore the studio</a></div>
-<header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">〰</span><span class="brand-name">FORME<span>®</span></span></a>
-<button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
-<nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-<a href="index.html">Home 1</a><a href="home-2.html">Home 2</a><a href="about.html">About</a><a href="classes.html">Class Formats</a><a href="instructors.html">Certified Instructors</a><a href="membership.html">Membership Plans</a><a href="amenities.html">Studio Amenities</a><a href="contact.html">Contact</a><a class="nav-cta" href="dashboard.html">Dashboard ↗</a>
-</nav></header><main>
-<section class="dashboard-wrap wrap"><aside class="dash-sidebar"><div class="dash-brand">FORME <span>MEMBER</span></div><a class="active" href="#overview">Overview</a><a href="#schedule">My Schedule</a><a href="classes.html">Book a Class</a><a href="#packs">Class Packs</a><a href="#progress">Milestones</a><a href="#billing">Billing History</a><a href="contact.html">Support</a><a href="login.html">Logout</a></aside><div class="dash-main" id="overview"><div class="dash-top"><div><p class="eyebrow">MEMBER SPACE</p><h1>Welcome back.</h1><p>Here’s your movement snapshot.</p></div><a class="button button-plum" href="classes.html">Book a class ↗</a></div><div class="metric-grid"><div class="metric"><span>UPCOMING CLASSES</span><strong>02</strong><small>Next 7 days</small></div><div class="metric" id="packs"><span>CLASS CREDITS</span><strong>05</strong><small>Demo account data</small></div><div class="metric" id="progress"><span>ATTENDANCE STREAK</span><strong>03</strong><small>Consecutive weeks</small></div></div><section class="dash-panel" id="schedule"><div class="panel-head"><h2>My schedule</h2><a href="classes.html">View classes ↗</a></div><div class="schedule-row"><div class="date-tile"><b>18</b><span>NOV</span></div><div><b>Reformer Essentials</b><small>09:00 AM · Studio A · Instructor to be assigned</small></div><span class="status">BOOKED</span></div><div class="schedule-row"><div class="date-tile"><b>21</b><span>NOV</span></div><div><b>Mat & Mobility</b><small>06:00 PM · Studio B · Instructor to be assigned</small></div><span class="status">BOOKED</span></div></section><div class="cards two dash-lower"><section class="dash-panel" id="billing"><h2>Recent activity</h2><p class="muted-text">No live transactions connected.</p><div class="activity-row"><span>Membership pack</span><b>Demo</b></div><div class="activity-row"><span>Last class attended</span><b>—</b></div></section><section class="dash-panel"><h2>Instructor note</h2><p class="muted-text">Your instructor notes will appear here when enabled by the studio. Notes should be shared with appropriate privacy controls.</p><a class="under-link" href="contact.html">Contact the studio ↗</a></section></div></div></section></main><footer class="site-footer"><div class="wrap footer-top"><a class="brand footer-brand" href="index.html"><span class="brand-mark">〰</span><span class="brand-name">FORME<span>®</span></span></a><p>Move well. Feel more.</p><a href="#top" class="back-top">BACK TO TOP ↑</a></div><div class="wrap footer-bottom"><span>© 2026 FORME PILATES STUDIO</span><span><a href="contact.html">CONTACT</a></span><span>MADE FOR MOVEMENT</span></div></footer><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1f4e4b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png"><link rel="apple-touch-icon" href="favicon.png">
+  <title>Member Dashboard | FORME Portal</title>
+</head>
+<body class="dashboard-page" id="top">
+  <main class="dashboard-wrap wrap">
+    <aside class="dash-sidebar" aria-label="Dashboard navigation">
+      <div class="dash-brand">
+        <div class="dash-brand-head">
+          <a class="dash-brand-row" href="index.html" aria-label="FORME home page"><img class="brand-logo dash-brand-logo logo-light" src="Plum and Gold Pilates Studio Logo.png" alt="FORME Pilates Studio"><img class="brand-logo dash-brand-logo logo-dark" src="logo-dark-mode.png" alt="FORME Pilates Studio"></a>
+          <button type="button" class="dash-menu-toggle" aria-label="Open dashboard menu" aria-expanded="false" aria-controls="dash-drawer"><span></span><span></span><span></span></button>
+        </div>
+        <span class="dash-brand-sub">MEMBER PORTAL</span>
+      </div>
+      <div class="dash-drawer" id="dash-drawer">
+        <nav class="dash-nav" role="tablist" aria-label="Dashboard menus">
+          <button type="button" class="dash-nav-btn active" role="tab" id="tab-overview" aria-selected="true" aria-controls="view-overview" data-dash-tab="overview">Overview</button>
+          <button type="button" class="dash-nav-btn" role="tab" id="tab-schedule" aria-selected="false" aria-controls="view-schedule" data-dash-tab="schedule">Schedule</button>
+          <button type="button" class="dash-nav-btn" role="tab" id="tab-membership" aria-selected="false" aria-controls="view-membership" data-dash-tab="membership">Membership</button>
+          <button type="button" class="dash-nav-btn" role="tab" id="tab-account" aria-selected="false" aria-controls="view-account" data-dash-tab="account">Account</button>
+        </nav>
+        <div class="dash-controls" aria-label="Display settings">
+          <span class="dash-controls-label">Preferences</span>
+          <div class="dash-controls-row">
+            <button class="dash-util-btn dash-theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+            <button class="dash-util-btn dash-rtl-toggle" type="button" aria-label="Switch layout to right-to-left" aria-pressed="false">RTL</button>
+          </div>
+          <a class="dash-logout-btn" href="index.html">Logout</a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="dash-main">
+      <div class="dash-view" id="view-overview" role="tabpanel" aria-labelledby="tab-overview" data-dash-view="overview">
+        <div class="dash-top">
+          <div>
+            <p class="eyebrow">MEMBER SPACE</p>
+            <h1>Welcome back.</h1>
+            <p>Movement summary for Ananya Rao · Indiranagar Studio</p>
+          </div>
+          <button type="button" class="button button-plum" data-dash-goto="schedule">Manage schedule</button>
+        </div>
+
+        <section class="dash-section" aria-labelledby="ov-sec-1">
+          <h2 class="dash-view-heading" id="ov-sec-1">01 · Movement Snapshot</h2>
+          <div class="metric-grid">
+            <div class="metric"><span>UPCOMING CLASSES</span><strong>02</strong><small>Next 7 days</small></div>
+            <div class="metric"><span>CLASS CREDITS</span><strong>05</strong><small>Active Flex 5 pack</small></div>
+            <div class="metric"><span>ATTENDANCE STREAK</span><strong>03</strong><small>Consecutive weeks</small></div>
+          </div>
+        </section>
+
+        <section class="dash-panel" aria-labelledby="ov-sec-2">
+          <div class="panel-head">
+            <h2 id="ov-sec-2">02 · Upcoming Sessions</h2>
+            <button type="button" class="dash-panel-cta" data-dash-goto="schedule">Open schedule</button>
+          </div>
+          <div class="schedule-row">
+            <div class="date-tile"><b>18</b><span>NOV</span></div>
+            <div><b>Reformer Essentials</b><small>09:00 AM · Studio A · Coach Meera</small></div>
+            <span class="status">BOOKED</span>
+          </div>
+          <div class="schedule-row">
+            <div class="date-tile"><b>21</b><span>NOV</span></div>
+            <div><b>Mat &amp; Mobility</b><small>06:00 PM · Studio B · Coach Kabir</small></div>
+            <span class="status">BOOKED</span>
+          </div>
+        </section>
+
+        <div class="cards two dash-lower">
+          <section class="dash-panel" aria-labelledby="ov-sec-3">
+            <div class="panel-head">
+              <h2 id="ov-sec-3">03 · Active Membership</h2>
+              <button type="button" class="dash-panel-cta" data-dash-goto="membership">View pack</button>
+            </div>
+            <div class="activity-row"><span>Current pack</span><b>Flex 5 (05 left)</b></div>
+            <div class="activity-row"><span>Renewal cycle</span><b>28 Dec 2026</b></div>
+            <div class="activity-row"><span>Home studio</span><b>Indiranagar A</b></div>
+          </section>
+
+          <section class="dash-panel" aria-labelledby="ov-sec-4">
+            <div class="panel-head">
+              <h2 id="ov-sec-4">04 · Instructor Notes</h2>
+              <button type="button" class="dash-panel-cta" data-dash-goto="account">Message studio</button>
+            </div>
+            <p class="muted-text">Thoracic mobility improved across carriage press series. Continue light blue spring warmup during Reformer Essentials before progressing tension.</p>
+          </section>
+        </div>
+      </div>
+
+      <div class="dash-view" id="view-schedule" role="tabpanel" aria-labelledby="tab-schedule" data-dash-view="schedule" hidden>
+        <div class="dash-top">
+          <div>
+            <p class="eyebrow">CLASS TIMETABLE</p>
+            <h1>Your schedule.</h1>
+            <p>Review bookings, reserve open studio slots or check past attendance.</p>
+          </div>
+          <button type="button" class="button button-outline" data-dash-goto="membership">Check credits</button>
+        </div>
+
+        <section class="dash-section" aria-labelledby="sc-sec-1">
+          <h2 class="dash-view-heading" id="sc-sec-1">01 · Monthly Attendance Metrics</h2>
+          <div class="metric-grid">
+            <div class="metric"><span>BOOKED AHEAD</span><strong>02</strong><small>Confirmed sessions</small></div>
+            <div class="metric"><span>COMPLETED THIS MONTH</span><strong>07</strong><small>Reformer &amp; Mat</small></div>
+            <div class="metric"><span>WAITLIST HOLDS</span><strong>00</strong><small>No pending alerts</small></div>
+          </div>
+        </section>
+
+        <section class="dash-panel" aria-labelledby="sc-sec-2">
+          <h2 id="sc-sec-2">02 · Confirmed Bookings</h2>
+          <div class="schedule-row">
+            <div class="date-tile"><b>18</b><span>NOV</span></div>
+            <div><b>Reformer Essentials</b><small>09:00 AM · Studio A · 50 min</small></div>
+            <span class="status">BOOKED</span>
+            <button type="button" class="dash-action-btn" data-dash-booking aria-pressed="false">Cancel</button>
+          </div>
+          <div class="schedule-row">
+            <div class="date-tile"><b>21</b><span>NOV</span></div>
+            <div><b>Mat &amp; Mobility</b><small>06:00 PM · Studio B · 45 min</small></div>
+            <span class="status">BOOKED</span>
+            <button type="button" class="dash-action-btn" data-dash-booking aria-pressed="false">Cancel</button>
+          </div>
+        </section>
+
+        <section class="dash-panel" aria-labelledby="sc-sec-3">
+          <h2 id="sc-sec-3">03 · Open Class Slots</h2>
+          <div class="schedule-row">
+            <div class="date-tile"><b>23</b><span>NOV</span></div>
+            <div><b>Form &amp; Strength</b><small>07:30 AM · Studio A · 3 spots left</small></div>
+            <span class="status is-muted">OPEN</span>
+            <button type="button" class="dash-action-btn" data-dash-reserve aria-pressed="false">Reserve</button>
+          </div>
+          <div class="schedule-row">
+            <div class="date-tile"><b>25</b><span>NOV</span></div>
+            <div><b>Foundational Reformer</b><small>05:30 PM · Studio A · 2 spots left</small></div>
+            <span class="status is-muted">OPEN</span>
+            <button type="button" class="dash-action-btn" data-dash-reserve aria-pressed="false">Reserve</button>
+          </div>
+        </section>
+
+        <section class="dash-panel" aria-labelledby="sc-sec-4">
+          <h2 id="sc-sec-4">04 · Recent Attendance</h2>
+          <div class="activity-row"><span>14 Nov · Reformer Essentials · Coach Meera</span><b>Completed</b></div>
+          <div class="activity-row"><span>11 Nov · Mat &amp; Mobility · Coach Kabir</span><b>Completed</b></div>
+          <div class="activity-row"><span>07 Nov · Form &amp; Strength · Coach Meera</span><b>Completed</b></div>
+        </section>
+      </div>
+
+      <div class="dash-view" id="view-membership" role="tabpanel" aria-labelledby="tab-membership" data-dash-view="membership" hidden>
+        <div class="dash-top">
+          <div>
+            <p class="eyebrow">CREDITS &amp; BILLING</p>
+            <h1>Membership.</h1>
+            <p>Review remaining class credits, recent invoices and pack options.</p>
+          </div>
+          <button type="button" class="button button-outline" data-dash-goto="schedule">Use credits</button>
+        </div>
+
+        <section class="dash-section" aria-labelledby="mb-sec-1">
+          <h2 class="dash-view-heading" id="mb-sec-1">01 · Plan Overview</h2>
+          <div class="metric-grid">
+            <div class="metric"><span>ACTIVE PACK</span><strong>Flex 5</strong><small>Group classes</small></div>
+            <div class="metric"><span>CREDITS REMAINING</span><strong>05</strong><small>Valid through 28 Dec</small></div>
+            <div class="metric"><span>DAYS TO RENEWAL</span><strong>42</strong><small>Auto-renew off</small></div>
+          </div>
+        </section>
+
+        <section class="dash-panel" aria-labelledby="mb-sec-2">
+          <h2 id="mb-sec-2">02 · Credit Allocation</h2>
+          <div class="activity-row"><span>Reformer &amp; Strength Eligibility</span><b>5 Credits</b></div>
+          <div class="activity-row"><span>Mat &amp; Mobility Eligibility</span><b>Included</b></div>
+          <div class="activity-row"><span>Reformer Orientation Session</span><b>Completed</b></div>
+        </section>
+
+        <section class="dash-panel" aria-labelledby="mb-sec-3">
+          <h2 id="mb-sec-3">03 · Billing Activity</h2>
+          <div class="activity-row"><span>#INV-204 · Flex 5 Class Pack</span><b>Demo</b></div>
+          <div class="activity-row"><span>#INV-198 · First Steps Intro Pack</span><b>Settled</b></div>
+          <div class="activity-row"><span>Studio Grip Socks Credit</span><b>Redeemed</b></div>
+        </section>
+
+        <section class="dash-panel" aria-labelledby="mb-sec-4">
+          <h2 id="mb-sec-4">04 · Pack Options</h2>
+          <div class="dash-pack-grid">
+            <div class="dash-pack-option">
+              <strong>First Steps</strong>
+              <span>3 class credits · Beginner foundations</span>
+              <button type="button" class="dash-action-btn" data-dash-pack="First Steps" aria-pressed="false">Select</button>
+            </div>
+            <div class="dash-pack-option is-current">
+              <strong>Flex 5</strong>
+              <span>5 class credits · Flexible weekly rhythm</span>
+              <button type="button" class="dash-action-btn" data-dash-pack="Flex 5" aria-pressed="true">Selected</button>
+            </div>
+            <div class="dash-pack-option">
+              <strong>Private 10</strong>
+              <span>10 private sessions · 1:1 coaching</span>
+              <button type="button" class="dash-action-btn" data-dash-pack="Private 10" aria-pressed="false">Select</button>
+            </div>
+          </div>
+          <p class="form-feedback" id="pack-feedback" role="status" aria-live="polite"></p>
+        </section>
+      </div>
+
+      <div class="dash-view" id="view-account" role="tabpanel" aria-labelledby="tab-account" data-dash-view="account" hidden>
+        <div class="dash-top">
+          <div>
+            <p class="eyebrow">MEMBER SETTINGS</p>
+            <h1>Account.</h1>
+            <p>Manage personal details, practice preferences and studio support requests.</p>
+          </div>
+        </div>
+
+        <div class="cards two dash-lower">
+          <section class="dash-panel" aria-labelledby="ac-sec-1">
+            <h2 id="ac-sec-1">01 · Profile Details</h2>
+            <form class="dash-form" data-demo-form data-preserve-fields data-feedback="Demo profile saved locally in this view.">
+              <label for="prof-name">Full name</label>
+              <input id="prof-name" type="text" required value="Ananya Rao">
+              <label for="prof-email">Email address</label>
+              <input id="prof-email" type="email" required value="member@formepilates.in">
+              <label for="prof-phone">Phone number</label>
+              <input id="prof-phone" type="tel" dir="ltr" value="+91 98450 12345">
+              <button type="submit" class="button button-plum">Save profile</button>
+              <p class="form-feedback" role="status" aria-live="polite"></p>
+            </form>
+          </section>
+
+          <section class="dash-panel" aria-labelledby="ac-sec-2">
+            <h2 id="ac-sec-2">02 · Practice Preferences</h2>
+            <form class="dash-form" data-demo-form data-preserve-fields data-feedback="Demo training preferences updated.">
+              <label for="pref-focus">Primary movement goal</label>
+              <select id="pref-focus">
+                <option selected>Core strength &amp; alignment</option>
+                <option>Postural mobility</option>
+                <option>Athletic conditioning</option>
+              </select>
+              <label for="pref-slot">Preferred class window</label>
+              <select id="pref-slot">
+                <option selected>Morning (07:00 AM – 10:00 AM)</option>
+                <option>Midday (12:00 PM – 03:00 PM)</option>
+                <option>Evening (05:30 PM – 08:00 PM)</option>
+              </select>
+              <label for="pref-room">Home studio room</label>
+              <select id="pref-room">
+                <option selected>Studio A · Reformer Floor</option>
+                <option>Studio B · Mat Suite</option>
+              </select>
+              <button type="submit" class="button button-plum">Save preferences</button>
+              <p class="form-feedback" role="status" aria-live="polite"></p>
+            </form>
+          </section>
+        </div>
+
+        <div class="cards two dash-lower">
+          <section class="dash-panel" aria-labelledby="ac-sec-3">
+            <h2 id="ac-sec-3">03 · Booking Notifications</h2>
+            <form class="dash-form" data-demo-form data-preserve-fields data-feedback="Notification preferences saved for this demo session.">
+              <label class="checkline"><input type="checkbox" checked> Send 24-hour class reminder</label>
+              <label class="checkline"><input type="checkbox" checked> Alert when waitlist spot opens</label>
+              <label class="checkline"><input type="checkbox" checked> Include instructor note updates</label>
+              <button type="submit" class="button button-outline">Update alerts</button>
+              <p class="form-feedback" role="status" aria-live="polite"></p>
+            </form>
+          </section>
+
+          <section class="dash-panel" aria-labelledby="ac-sec-4">
+            <h2 id="ac-sec-4">04 · Studio Support</h2>
+            <form class="dash-form" data-demo-form data-feedback="Support note logged in this demo interface. Connect reception messaging before launch.">
+              <label for="sup-topic">Request topic</label>
+              <select id="sup-topic">
+                <option>Reformer spring adjustment</option>
+                <option>Schedule or credit enquiry</option>
+                <option>Private coaching session</option>
+              </select>
+              <label for="sup-msg">Message to reception</label>
+              <textarea id="sup-msg" rows="3" required placeholder="Share how our studio team can assist you..."></textarea>
+              <button type="submit" class="button button-plum">Send message</button>
+              <p class="form-feedback" role="status" aria-live="polite"></p>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
