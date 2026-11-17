@@ -22,6 +22,16 @@
         <span class="dash-brand-sub">MEMBER PORTAL</span>
       </div>
       <div class="dash-drawer" id="dash-drawer">
+        <button type="button" class="dash-profile-btn" data-dash-goto="account" aria-label="Open profile details for Ananya Rao">
+          <span class="dash-avatar" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </span>
+          <span class="dash-profile-meta">
+            <strong data-profile-name>Ananya Rao</strong>
+            <small>Flex 5 · Indiranagar</small>
+          </span>
+          <svg class="dash-profile-arrow" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
         <nav class="dash-nav" role="tablist" aria-label="Dashboard menus">
           <button type="button" class="dash-nav-btn active" role="tab" id="tab-overview" aria-selected="true" aria-controls="view-overview" data-dash-tab="overview">Overview</button>
           <button type="button" class="dash-nav-btn" role="tab" id="tab-schedule" aria-selected="false" aria-controls="view-schedule" data-dash-tab="schedule">Schedule</button>
@@ -47,9 +57,20 @@
           <div>
             <p class="eyebrow">MEMBER SPACE</p>
             <h1>Welcome back.</h1>
-            <p>Movement summary for Ananya Rao · Indiranagar Studio</p>
+            <p>Movement summary for <span data-profile-name>Ananya Rao</span> · Indiranagar Studio</p>
           </div>
-          <button type="button" class="button button-plum" data-dash-goto="schedule">Manage schedule</button>
+          <div class="dash-top-actions">
+            <button type="button" class="dash-profile-chip" data-dash-goto="account" aria-label="View profile details for Ananya Rao">
+              <span class="dash-avatar dash-avatar-sm" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </span>
+              <span class="dash-profile-chip-text">
+                <strong data-profile-name>Ananya Rao</strong>
+                <small data-profile-email>member@formepilates.in</small>
+              </span>
+            </button>
+            <button type="button" class="button button-plum" data-dash-goto="schedule">Manage schedule</button>
+          </div>
         </div>
 
         <section class="dash-section" aria-labelledby="ov-sec-1">
@@ -226,7 +247,17 @@
         <div class="cards two dash-lower">
           <section class="dash-panel" aria-labelledby="ac-sec-1">
             <h2 id="ac-sec-1">01 · Profile Details</h2>
-            <form class="dash-form" data-demo-form data-preserve-fields data-feedback="Demo profile saved locally in this view.">
+            <div class="dash-profile-summary">
+              <span class="dash-avatar dash-avatar-lg" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </span>
+              <div class="dash-profile-summary-meta">
+                <strong data-profile-name>Ananya Rao</strong>
+                <span data-profile-email>member@formepilates.in</span>
+                <small>Member ID: FRM-2026-0418 · Flex 5 Pack</small>
+              </div>
+            </div>
+            <form class="dash-form" id="dash-profile-form" data-demo-form data-preserve-fields data-feedback="Demo profile saved locally in this view.">
               <label for="prof-name">Full name</label>
               <input id="prof-name" type="text" required value="Ananya Rao">
               <label for="prof-email">Email address</label>
